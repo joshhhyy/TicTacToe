@@ -71,6 +71,7 @@ $(document).ready(function () {
         ) {
       victoryLog(player)
       incrementPlayerWins(player)
+      $('.box').click(false)
     } else {
       drawCount += 1
     }  
@@ -84,6 +85,7 @@ $(document).ready(function () {
         ) {
       victoryLog(player)
       incrementPlayerWins(player)
+      $('.box').click(false)
     } else {
       drawCount += 1
     }
@@ -96,6 +98,7 @@ $(document).ready(function () {
         ) {
       victoryLog(player)
       incrementPlayerWins(player)
+      $('.box').click(false)
     } else {
       drawCount += 1
     }
