@@ -50,7 +50,7 @@ Admittedly I tried briefly tackling the project without any planning, I also sta
  - Now in Sublime Text, list the important variables and functions, giving meaningful names to each
  - Begin to code each function and test them regularly in Google Chrome
 
- ---
+---
 
 ### Unsolved Problems
 
