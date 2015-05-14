@@ -50,6 +50,7 @@ Admittedly I tried briefly tackling the project without any planning, I also sta
  - Begin to code each function and test them regularly in Google Chrome
 
  ---
+ 
 ### Unsolved Problems
 
 There are a number of features I missed out on completing because of difficulty. While they weren't necessary for a successful TTT game, some things like an unbeatable AI or the ability for the player to customise the grid dimensions proved too difficult to implement as they would've resulted in drastic changes to my existing logic of the game.
