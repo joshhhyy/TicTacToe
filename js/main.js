@@ -156,6 +156,7 @@ var resetGame = function() {
   toggleMouse = 0
   drawCount = 0
   $(".selected").removeClass("selected"); 
+  $('#board').css({'cursor': 'pointer'})
 }
 
   $('.resetGame').on('click', resetGame)  
