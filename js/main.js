@@ -17,7 +17,8 @@ $(document).ready(function () {
 // -------------- TURN FUNCTIONS -------------- //
 
   var fillSquare = function() {
-    if ($(this).html() === '') {
+    if ( !$(this).hasClass("selected") ) {
+      $(this).addClass("selected");
       if (toggleColour === 0) {
         $(this).html('X')
         toggleColour += 1
@@ -71,7 +72,7 @@ $(document).ready(function () {
         ) {
       victoryLog(player)
       incrementPlayerWins(player)
-      $('.box').click(false)
+      $('#board .box').addClass('selected')
     } else {
       drawCount += 1
     }  
@@ -85,7 +86,7 @@ $(document).ready(function () {
         ) {
       victoryLog(player)
       incrementPlayerWins(player)
-      $('.box').click(false)
+      $('#board .box').addClass('selected')
     } else {
       drawCount += 1
     }
@@ -98,7 +99,7 @@ $(document).ready(function () {
         ) {
       victoryLog(player)
       incrementPlayerWins(player)
-      $('.box').click(false)
+      $('#board .box').addClass('selected')
     } else {
       drawCount += 1
     }
@@ -154,6 +155,7 @@ var resetGame = function() {
   toggleColour = 0
   toggleMouse = 0
   drawCount = 0
+  $(".selected").removeClass("selected"); 
 }
 
   $('.resetGame').on('click', resetGame)  
