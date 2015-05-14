@@ -126,6 +126,15 @@ h2 {
   cursor: pointer;
 }
 
+.hotStreak {
+  position: absolute;
+  top: 620px;
+  left: 120px;
+  font-size: 20px;
+  color: #FFEED5;
+
+}
+
 
 
 

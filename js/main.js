@@ -8,6 +8,8 @@ $(document).ready(function () {
   localStorage.xWinCount = localStorage.xWinCount || 0;
   localStorage.oWinCount = localStorage.oWinCount || 0;
   var drawCount = 0;
+  var xStreak = 0
+  var oStreak = 0
 
   $('.xWinCounter p').html(localStorage.xWinCount);
   $('.oWinCounter p').html(localStorage.oWinCount);
@@ -16,7 +18,7 @@ $(document).ready(function () {
 
 // -------------- TURN FUNCTIONS -------------- //
 
-  var fillSquare = function() {
+  var fillSquare = function() { 
     if ( !$(this).hasClass("selected") ) {
       $(this).addClass("selected");
       if (toggleColour === 0) {
@@ -109,9 +111,24 @@ $(document).ready(function () {
     if (player === 'X') {
       localStorage.xWinCount = parseInt(localStorage.xWinCount) + 1;
       $('.xWinCounter p').html(localStorage.xWinCount)
+      xStreak += 1
+      oStreak = 0
+      $('.hotStreak').html('')
     } else {
       localStorage.oWinCount = parseInt(localStorage.oWinCount) + 1
       $('.oWinCounter p').html(localStorage.oWinCount)
+      xStreak = 0
+      oStreak += 1
+      $('.hotStreak').html('')
+    }
+    detectHotStreak()
+  }
+
+  var detectHotStreak = function() {
+    if (xStreak === 3) {
+      $('.hotStreak').html('Player X is on a hot streak!')
+    } else if (oStreak === 3) {
+      $('.hotStreak').html('Player O is on a hot streak!')
     }
   }
 
