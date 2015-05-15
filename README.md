@@ -16,6 +16,7 @@
  - Cursor changes to current player's token to indicate who's turn it currently is (Thanks to Stella Halena)
  - Player's cannot select a box that has been previously selected
  - Player's cannot select a box once the game is over
+ - Visually displays when player cannot make a move
  - Number of games played in the user's session are logged after a completed game
  - Player X and O's wins are stored within localStorage, allowing them to persist even after refreshing the page
  - Detects whether a draw game has occurred and correctly doesn't allocate a win to either player
