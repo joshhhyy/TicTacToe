@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-  var toggleColour = 0;
+  var togglePlayer = 0;
   var toggleMouse = 0;
   var xWin = 'XXX';
   var oWin = 'OOO';
@@ -21,19 +21,22 @@ $(document).ready(function () {
   var fillSquare = function() { 
     if ( !$(this).hasClass("selected") ) {
       $(this).addClass("selected");
-      if (toggleColour === 0) {
+      $('.box').css({'background-color': '#2A85B2'})
+      if (togglePlayer === 0) {
         $(this).html('X')
-        toggleColour += 1
+        togglePlayer += 1
         logMove('X', this)
         winCheck('X')
         selectCursor()
       } else {
         $(this).html('O')
-        toggleColour -= 1
+        togglePlayer -= 1
         logMove('O', this)
         winCheck('O')
         selectCursor()
       }
+    } else {
+      $(this).css({'background-color': 'red'}).fadeOut().fadeIn()
     }
   }
 
@@ -166,10 +169,10 @@ $(document).ready(function () {
 // ----------------- RESET GAME -------------------- //
 
 var resetGame = function() {
-  $('.box').html('').fadeOut().fadeIn()
+  $('.box').html('').css({'background-color': '#2A85B2', 'opacity': '1'}).fadeOut().fadeIn()
   $('h2').html('Commence Battle').fadeOut().fadeIn()
   $('.headPanel p').html('').fadeOut().fadeIn()
-  toggleColour = 0
+  togglePlayer = 0
   toggleMouse = 0
   drawCount = 0
   $(".selected").removeClass("selected"); 
