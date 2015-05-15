@@ -56,10 +56,17 @@ $(document).ready(function () {
     columnWin(player, oWin);
     diagonalWin(player, xWin)
     diagonalWin(player, oWin)
+    detectDrawGame()
+  }
+
+  var detectDrawGame = function() {
     if (drawCount === 54) {
       $('h2').html('No one is a winner!').fadeOut().fadeIn();
       winCount += 1
       $('.winCounter p').html(winCount)
+      xStreak = 0
+      oStreak = 0
+      $('.hotStreak').html('')
     }
   }
 
